@@ -22,3 +22,41 @@ export const createUser = async (req, res) => {
     }
 };
 
+//obterner usuario por id
+export const getUserById = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const user = await prisma.user.findUnique({ where: { id: BigInt(id) }, include: { Task: true } });  
+        if (!user) return res.status(404).json({ error: 'Usuario no encontrado' });
+        res.json(user);
+    } catch (error) {
+        res.status(400).json({ error: 'Error al obtener usuario: ' + error.message });
+    } 
+};
+
+//Actualizar usuario    
+export const updateUser = async (req, res) => {
+    const { id } = req.params;
+    const { name, email, password } = req.body;
+    try {
+        const updatedUser = await prisma.user.update({
+            where: { id: BigInt(id) },
+            data: { name, email, password }
+        });
+        res.json(updatedUser);
+    }
+    catch (error) {
+        res.status(400).json({ error: 'Error al actualizar usuario: ' + error.message });
+    }
+};
+
+//Eliminar usuario
+export const deleteUser = async (req, res) => {
+    const { id } = req.params;
+    try {
+        await prisma.user.delete({ where: { id: BigInt(id) } });
+        res.jason({ message: 'Usuario eliminado correctamente' });
+    } catch (error) {
+        res.status(400).json({ error: 'Error al eliminar usuario: ' + error.message });
+    }
+};      
