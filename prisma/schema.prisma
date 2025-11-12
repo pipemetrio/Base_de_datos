@@ -18,7 +18,7 @@ model User {
   id        BigInt   @id @default(autoincrement())
   email     String   @unique
   name      String?
-  pasword   String?
+  password  String?
   createdAt DateTime @default(now()) @db.Timestamp(6)
   updatedAt DateTime @updatedAt
   task      Task[]

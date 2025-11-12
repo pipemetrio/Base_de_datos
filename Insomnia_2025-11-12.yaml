@@ -1,0 +1,283 @@
+type: collection.insomnia.rest/5.0
+name: My first collection
+meta:
+  id: wrk_863bcf935c8041e3853a7a53c04938a9
+  created: 1762954269274
+  modified: 1762954269274
+  description: ""
+collection:
+  - name: Users
+    meta:
+      id: fld_048a5cf04c874abcb382599a650d49e3
+      created: 1762958473021
+      modified: 1762958473021
+      sortKey: -1762958473022
+      description: ""
+    children:
+      - url: http://localhost:3000/user
+        name: getUsers
+        meta:
+          id: req_eb2e818256834064aa6cabdb648708f3
+          created: 1762954269379
+          modified: 1762958643499
+          isPrivate: false
+          description: ""
+          sortKey: -1762958480882
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/user
+        name: createUser
+        meta:
+          id: req_306c03c023dd494f88661ecde3d186c6
+          created: 1762955786820
+          modified: 1762958617647
+          isPrivate: false
+          description: ""
+          sortKey: -1762958480932
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Andres",
+            	"email": "andres2356@gmail.com"
+            	"password": "1234"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/user/1
+        name: getUserById
+        meta:
+          id: req_39665a3258414cc2a691efe1df084fb0
+          created: 1762955795575
+          modified: 1762958655827
+          isPrivate: false
+          description: ""
+          sortKey: -1762958480832
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/user/1
+        name: updateUser
+        meta:
+          id: req_8d5b070145fd4c0aab22955e7ac02d8f
+          created: 1762955799745
+          modified: 1762958508102
+          isPrivate: false
+          description: ""
+          sortKey: -1762958480732
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"name": "Andrea",
+            	"email": "andrea@gmail.com"
+            	"password": "5678"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/user/1
+        name: deleteUser
+        meta:
+          id: req_dbf16bfa99844a94b77a85bfa7b5aa83
+          created: 1762955806950
+          modified: 1762958483272
+          isPrivate: false
+          description: ""
+          sortKey: -1762958480532
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Task
+    meta:
+      id: fld_5953d6a9d04e472386353b2fc33d9709
+      created: 1762958532609
+      modified: 1762958532609
+      sortKey: -1762958532609
+      description: ""
+    children:
+      - url: http://localhost:3000/task/1
+        name: deleteTask
+        meta:
+          id: req_9ea38d22187d4d169be43c6aa69537ee
+          created: 1762958584038
+          modified: 1762959040073
+          isPrivate: false
+          description: ""
+          sortKey: -1762958584038
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/task/1
+        name: updateTask
+        meta:
+          id: req_6fbc20de64fe48fdafc7b94475884434
+          created: 1762958588111
+          modified: 1762958955481
+          isPrivate: false
+          description: ""
+          sortKey: -1762958588111
+        method: PUT
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/task/1
+        name: getTaskById
+        meta:
+          id: req_735967af274641b7a65b4cba7f2f6519
+          created: 1762958591728
+          modified: 1762958989240
+          isPrivate: false
+          description: ""
+          sortKey: -1762958591728
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/task
+        name: createTask
+        meta:
+          id: req_1cea6fbe519f4e77b2c8324e45cdeb94
+          created: 1762958595341
+          modified: 1762959073980
+          isPrivate: false
+          description: ""
+          sortKey: -1762958601953
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"title": "aprendiendo node.j",
+            	"description": "repasar el proyecto de prisma y supabase",
+            	"completed": false,
+            	"user_id": 1
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3000/task
+        name: getTask
+        meta:
+          id: req_fba0885bcd794872b91e553e2c891ea9
+          created: 1762958601853
+          modified: 1762958716708
+          isPrivate: false
+          description: ""
+          sortKey: -1762958601853
+        method: GET
+        body:
+          mimeType: application/json
+          text: ""
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.0.0
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_3768be292888d174493cf50495a1a5ef5d9c1a7a
+    created: 1762954269303
+    modified: 1762954269303
+environments:
+  name: Base Environment
+  meta:
+    id: env_3768be292888d174493cf50495a1a5ef5d9c1a7a
+    created: 1762954269289
+    modified: 1762954269289
+    isPrivate: false

@@ -1,5 +1,5 @@
-import {prisma, PrismaClient} from '@prisma/client';
-const prisma = new PrismaClient();
+import prisma from '../prismaClient.js';
+
 
 //Obtener todos los usuarios con sus tareas asociadas
 export const getUsers =  async (req, res) => {
